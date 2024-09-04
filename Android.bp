@@ -5,12 +5,9 @@
 soong_namespace {
 	imports: [
 		"device/xiaomi/sm6150-common",
-		"hardware/qcom-caf/common/libqti-perfd-client",
 		"hardware/qcom-caf/sm8150",
 		"hardware/qcom-caf/wlan",
 		"hardware/xiaomi",
-		"vendor/qcom/opensource/commonsys/display",
-		"vendor/qcom/opensource/commonsys-intf/display",
 		"vendor/qcom/opensource/dataservices",
 		"vendor/qcom/opensource/display",
 	],
@@ -351,6 +348,27 @@ cc_prebuilt_library_shared {
 		},
 		android_arm64: {
 			srcs: ["proprietary/vendor/lib64/libcdsprpc.so"],
+			shared_libs: ["libhidlbase", "libhardware", "libutils", "vendor.qti.hardware.dsp@1.0", "liblog", "libc", "libcutils", "libion", "libc++", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "both",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "libcdsprpc_system",
+	owner: "xiaomi",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/libcdsprpc_system.so"],
+			shared_libs: ["libhidlbase", "libhardware", "libutils", "vendor.qti.hardware.dsp@1.0", "liblog", "libc", "libcutils", "libion", "libc++", "libm", "libdl", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/libcdsprpc_system.so"],
 			shared_libs: ["libhidlbase", "libhardware", "libutils", "vendor.qti.hardware.dsp@1.0", "liblog", "libc", "libcutils", "libion", "libc++", "libm", "libdl", ],
 		},
 	},

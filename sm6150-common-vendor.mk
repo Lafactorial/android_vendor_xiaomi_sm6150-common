@@ -114,6 +114,7 @@ PRODUCT_PACKAGES += \
     libc2d30_bltlib \
     libcdsp_default_listener \
     libcdsprpc \
+    libcdsprpc_system \
     libdiag \
     libdsutils \
     libgsl \
