@@ -206,6 +206,7 @@ PRODUCT_PACKAGES += \
     libdataitems \
     libdisplayqos \
     libdpmqmihal \
+    libdpps \
     libdrmfs \
     libdrmtime \
     libdsi_netctrl \
