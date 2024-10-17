@@ -204,11 +204,14 @@ PRODUCT_PACKAGES += \
     libconfigdb \
     libcpion \
     libdataitems \
+    libdisp-aba \
+    libdisplaydebug \
     libdisplayqos \
     libdpmqmihal \
     libdpps \
     libdrmfs \
     libdrmtime \
+    libdrmutils \
     libdsi_netctrl \
     libgdtap \
     libhdcpsrm \
