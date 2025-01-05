@@ -132,7 +132,7 @@ PRODUCT_PACKAGES += \
     libllvm-glnext \
     libllvm-qcom \
     libmdmdetect \
-    libmmosal \
+    libmmosal_vendor \
     libqmi \
     libqmi_cci \
     libqmi_client_helper \
