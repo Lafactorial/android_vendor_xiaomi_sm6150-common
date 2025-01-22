@@ -149,20 +149,9 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.vpp@1.3 \
     vendor.qti.hardware.bluetooth_audio@2.1-impl \
     libFileMux_proprietary \
-    libOmxAacDec \
-    libOmxAlacDec \
-    libOmxAmrDec \
-    libOmxAmrwbplusDec \
-    libOmxApeDec \
-    libOmxDsdDec \
-    libOmxEvrcDec \
-    libOmxQcelp13Dec \
-    libOmxVpp \
-    libOmxWmaDec \
     libadpcmdec \
     libbluetooth_audio_session_qti \
     libbluetooth_audio_session_qti_2_1 \
-    libdsd2pcm \
     libmmrtpdecoder_proprietary \
     libmmrtpencoder_proprietary \
     libqcodec2 \
