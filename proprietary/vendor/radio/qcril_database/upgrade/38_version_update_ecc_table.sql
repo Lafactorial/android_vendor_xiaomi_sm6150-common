@@ -1,17 +1,25 @@
 /*
-  Copyright (c) 2020 Qualcomm Technologies, Inc.
+  Copyright (c) 2022 Qualcomm Technologies, Inc.
   All Rights Reserved.
   Confidential and Proprietary - Qualcomm Technologies, Inc.
 */
-
 BEGIN TRANSACTION;
-
 INSERT OR REPLACE INTO qcril_properties_table (property, value) VALUES ('qcrildb_version', 38);
 
-DELETE FROM qcril_emergency_source_voice_mcc_mnc_table where MCC = '510' AND MNC = '11' AND NUMBER = '117';
-DELETE FROM qcril_emergency_source_voice_mcc_mnc_table where MCC = '510' AND MNC = '89' AND NUMBER = '118';
+DELETE FROM "qcril_emergency_source_mcc_table" where MCC = '455' AND NUMBER = '120';
+DELETE FROM "qcril_emergency_source_mcc_table" where MCC = '455' AND NUMBER = '110';
+DELETE FROM "qcril_emergency_source_mcc_table" where MCC = '455' AND NUMBER = '119';
+DELETE FROM "qcril_emergency_source_mcc_table" where MCC = '455' AND NUMBER = '993';
 
-INSERT INTO qcril_emergency_source_voice_mcc_mnc_table VALUES('510','11','117','','full');
+INSERT INTO "qcril_emergency_source_mcc_table" VALUES('455','120','','');
+INSERT INTO "qcril_emergency_source_mcc_table" VALUES('455','110','','');
+INSERT INTO "qcril_emergency_source_mcc_table" VALUES('455','119','','');
+INSERT INTO "qcril_emergency_source_mcc_table" VALUES('455','993','','');
+
+DELETE FROM "qcril_emergency_source_hard_mcc_table" where MCC = '455' AND NUMBER = '120';
+DELETE FROM "qcril_emergency_source_hard_mcc_table" where MCC = '455' AND NUMBER = '993';
+
+INSERT INTO "qcril_emergency_source_hard_mcc_table" VALUES('455','120','','');
+INSERT INTO "qcril_emergency_source_hard_mcc_table" VALUES('455','993','','');
 
 COMMIT TRANSACTION;
-
