@@ -454,6 +454,7 @@ PRODUCT_PACKAGES += \
     dpmQmiMgr \
     dspservice \
     hvdcp_opti \
+    hvdcp_opti.recovery \
     android.hardware.bluetooth@1.0-service-qti \
     android.hardware.drm@1.3-service.widevine \
     android.hardware.gatekeeper@1.0-service-qti \
