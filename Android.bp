@@ -9557,14 +9557,15 @@ cc_prebuilt_library_shared {
                 "libandroid_runtime",
                 "libui",
                 "libinput",
-                "libbinder",
-                "libgui",
                 "libnativehelper",
                 "libutils",
                 "liblog",
                 "libwfdclient",
                 "libhidlbase",
                 "libhidlmemory",
+                "libbinder",
+                "libgui",
+                "android.hidl.base@1.0",
                 "android.hidl.token@1.0-utils",
                 "android.hardware.graphics.common@1.0",
                 "android.hardware.graphics.bufferqueue@1.0",
@@ -9742,6 +9743,8 @@ cc_prebuilt_library_shared {
                 "libmmosal",
                 "libutils",
                 "liblog",
+                "libcutils",
+                "libwfdconfigutils",
                 "libc++",
                 "libc",
                 "libm",
@@ -11601,15 +11604,14 @@ cc_prebuilt_binary {
 }
 
 cc_prebuilt_binary {
-    name: "wfdservice64",
+    name: "wfdservice",
     owner: "xiaomi",
     target: {
         android_arm64: {
             srcs: [
-                "proprietary/system_ext/bin/wfdservice64",
+                "proprietary/system_ext/bin/wfdservice",
             ],
             shared_libs: [
-                "libwfdservice_shim",
                 "liblog",
                 "libutils",
                 "libcutils",
